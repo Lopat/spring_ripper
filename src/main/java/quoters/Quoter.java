@@ -1,3 +1,5 @@
-package main.java.quoters;
+package quoters;
 
-public interface Quoter {}
+public interface Quoter {
+    void sayQuote();
+}
