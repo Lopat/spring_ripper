@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 public class TerminatorQuoter implements Quoter {
 
     TerminatorQuoter() {
-        System.err.println("PHASE ONE");
+        System.err.println("PRHASE ONE");
     }
 
     @PostConstruct
@@ -21,8 +21,9 @@ public class TerminatorQuoter implements Quoter {
     private int repeat;
 
     @Override
+    @PostProxy
     public void sayQuote() {
-
+        System.err.println("PHASE 3");
         for (int x = 0; x < repeat; x++) {
             System.out.println(message);
         }
