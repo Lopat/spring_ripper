@@ -10,12 +10,12 @@
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
     <bean class="quoters.ProfilingHandlingBeanPostProcessor"/>
 
-    <bean class = "quoters.TerminatorQuoter" id = "terminatorQuoter">
+    <bean class="quoters.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I'l be back"/>
     </bean>
 
     <bean class="quoters.PostProxyInvokerContextListener"/>
-
+    <bean class="quoters.DeprecationHandlerBeanFactoryPostProcessor"/>
 
 
 </beans>
