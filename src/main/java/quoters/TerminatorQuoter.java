@@ -2,10 +2,11 @@ package quoters;
 
 import javax.annotation.PostConstruct;
 
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     TerminatorQuoter() {
-        System.err.println("PRHASE ONE");
+        System.err.println("PHASE ONE");
     }
 
     @PostConstruct
