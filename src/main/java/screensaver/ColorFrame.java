@@ -10,10 +10,9 @@ import java.util.Random;
 
 @Component
 @Scope("singleton")
-public class ColorFrame extends JFrame {
+public abstract class ColorFrame extends JFrame {
 
-    @Autowired
-    private Color color;
+
     ColorFrame() throws HeadlessException {
         setSize(200, 200);
         setVisible(true);
@@ -23,7 +22,9 @@ public class ColorFrame extends JFrame {
     public void showOnRandomPlace(){
         Random random = new Random();
         setLocation(random.nextInt(1200), random.nextInt(700));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         repaint();
     }
+
+    protected abstract Color getColor();
 }
